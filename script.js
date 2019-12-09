@@ -8,7 +8,7 @@ window.onload = function () {
 	height -= padding * 2;
 	
 	// height width / w
-	var w = 6;
+	var w = 8;
 	var h = height * w / width; // Height has to be a scale of root 2 of the horizontal axis
 	var muScale = d3.scale.linear().domain([-w / 2, w / 2]).range([0, width]);
 	var sigmaScale = d3.scale.linear().domain([0, h]).range([height, 0]);
@@ -302,19 +302,19 @@ window.onload = function () {
 		return -(((((c1 * q + c2) * q + c3) * q + c4) * q + c5) * q + c6) / ((((d1 * q + d2) * q + d3) * q + d4) * q + 1);
 	}
 	
-// 	function tanh(t) {
-// 		if (t >= 0)
-// 			return (1 - Math.exp(-2*t)) / (1 + Math.exp(-2*t));
-// 		return (Math.exp(2*t) - 1) / (Math.exp(2*t) + 1);
-// 	}
+	function tanh(t) {
+		if (t >= 0)
+			return (1 - Math.exp(-2*t)) / (1 + Math.exp(-2*t));
+		return (Math.exp(2*t) - 1) / (Math.exp(2*t) + 1);
+	}
 	
-// 	function sech(t) {
-// 		return 2 / (Math.exp(t) + Math.exp(-t));
-// 	}
+	function sech(t) {
+		return 2 / (Math.exp(t) + Math.exp(-t));
+	}
 	
-// 	function arctanh(x) {
-// 		return (Math.log(1 + x) - Math.log(1 - x)) / 2;
-// 	}
+	function arctanh(x) {
+		return (Math.log(1 + x) - Math.log(1 - x)) / 2;
+	}
 };
 
 document.body.addEventListener('touchmove', function (e) {
