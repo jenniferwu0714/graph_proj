@@ -8,7 +8,7 @@ window.onload = function () {
 	height -= padding * 2;
 	
 	// height width / w
-	var w = 8;
+	var w = 10;
 	var h = height * w / width; // Height has to be a scale of root 2 of the horizontal axis
 	var muScale = d3.scale.linear().domain([-w / 2, w / 2]).range([0, width]);
 	var sigmaScale = d3.scale.linear().domain([0, h]).range([height, 0]);
