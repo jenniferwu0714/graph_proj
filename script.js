@@ -79,6 +79,7 @@ window.onload = function () {
 					});
 					state.progress = [];
 					
+					// find me arc1
 					if (state.geodesicArc) {
 						state.geodesicArc.remove();
 						state.geodesicFull.remove();
@@ -105,6 +106,7 @@ window.onload = function () {
 					if (geodesic[1] == Infinity)
 						return;
 
+					// find me arc2
 					if (state.geodesicArc) {
 						state.geodesicArc.remove();
 						state.geodesicFull.remove();
@@ -300,19 +302,19 @@ window.onload = function () {
 		return -(((((c1 * q + c2) * q + c3) * q + c4) * q + c5) * q + c6) / ((((d1 * q + d2) * q + d3) * q + d4) * q + 1);
 	}
 	
-	function tanh(t) {
-		if (t >= 0)
-			return (1 - Math.exp(-2*t)) / (1 + Math.exp(-2*t));
-		return (Math.exp(2*t) - 1) / (Math.exp(2*t) + 1);
-	}
+// 	function tanh(t) {
+// 		if (t >= 0)
+// 			return (1 - Math.exp(-2*t)) / (1 + Math.exp(-2*t));
+// 		return (Math.exp(2*t) - 1) / (Math.exp(2*t) + 1);
+// 	}
 	
-	function sech(t) {
-		return 2 / (Math.exp(t) + Math.exp(-t));
-	}
+// 	function sech(t) {
+// 		return 2 / (Math.exp(t) + Math.exp(-t));
+// 	}
 	
-	function arctanh(x) {
-		return (Math.log(1 + x) - Math.log(1 - x)) / 2;
-	}
+// 	function arctanh(x) {
+// 		return (Math.log(1 + x) - Math.log(1 - x)) / 2;
+// 	}
 };
 
 document.body.addEventListener('touchmove', function (e) {
